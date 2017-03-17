@@ -29,12 +29,6 @@ gem 'coffee-rails', '~> 4.2'
 
 # gem 'therubyracer', platforms: :ruby
 
-gem 'bootstrap', '4.0.0.alpha3'
-gem 'devise'
-
-# Note: You MUST use 5.0.0 or greater for Rails 4.0+
-gem 'friendly_id', '~> 5.1.0' 
-
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
@@ -77,3 +71,21 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+
+
+
+
+# Note: You MUST use 5.0.0 or greater for Rails 4.0+
+gem 'friendly_id', '~> 5.1.0' 
+
+gem 'bootstrap', '4.0.0.alpha3'
+gem 'devise'
+gem 'annotate'
+
+## Gemfile for Rails 3+, Sinatra, and Merb
+gem 'will_paginate', '~> 3.1.0'
+
+
+

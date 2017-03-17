@@ -6,15 +6,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="//cloud.tinymce.com/stable/tinymce.min.js"></script>
   </head>
 
   <body>
     <%= render 'layouts/navbar' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
+    <% if notice || alert %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    <% end %>
     <div class="container <%= controller_name %> <%= action_name %>">
-    <%= yield %>
+      <%= yield %>
     </div>
   </body>
 </html>
