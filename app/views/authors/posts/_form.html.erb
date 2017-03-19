@@ -26,19 +26,25 @@
           <li class="list-group-item">
             <div class="field">
               <%= f.label :title %>
-              <%= f.text_field :title %>
+              <%= f.text_field :title, class: 'form-control' %>
             </div>
           </li>
           <li class="list-group-item">
             <div class="field">
               <%= f.label :banner_image_url %>
-              <%= f.text_field :banner_image_url %>
+              <%= f.text_field :banner_image_url, class: 'form-control' %>
             </div>
           </li>
           <li class="list-group-item">
             <div class="field">
               <%= f.label :description %>
-              <%= f.text_area :description %>
+              <%= f.text_area :description, class: 'form-control' %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="field">
+              <%= f.label 'Tags' %>
+              <%= f.text_area :tag_list, class: 'form-control' %>
             </div>
           </li>
           <li class="list-group-item">
