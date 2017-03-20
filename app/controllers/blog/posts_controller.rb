@@ -12,12 +12,12 @@ module Blog
     def show
       @post = storage.friendly.find(params[:id])
     end
-    
+
     private
-    
+
     def storage
       Post.published
     end
-    
+
   end
 end
