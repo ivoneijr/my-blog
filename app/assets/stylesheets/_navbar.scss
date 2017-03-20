@@ -1,15 +1,17 @@
 .navbar {
-    background-color: #31708f;
+    color: #c5ced4;
+    background-color: #2b3643;
     border-radius: 0;
     margin-bottom: 25px;
     .navbar-brand {
-        font-weight: bolder;
-        .light {
-            font-weight: 300;
-        }
+      color: #c5ced4;
+      font-weight: bolder;
+      .light {
+          font-weight: 300;
+      }
     }
     .navbar-toggler {
-        outline: none;
+      outline: none;
     }
 }
 

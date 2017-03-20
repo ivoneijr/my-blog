@@ -15,7 +15,7 @@
           <li class="list-group-item">
             <%= link_to 'My Posts', authors_posts_path, class: "nav-link #{yield(:author)}" %>
           </li>
-          <li class="nav-item">
+          <li class="list-group-item">
             <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "nav-link"%>
           </li>
         <%else%>  
@@ -51,6 +51,8 @@
         <li class="nav-item">
           <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "nav-link"%>
         </li>
+      <%else%>  
+      <!-- TODO: LOGIN -->
       <%end%>
     </ul>
   </div>
