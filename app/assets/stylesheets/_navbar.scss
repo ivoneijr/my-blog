@@ -21,6 +21,15 @@
         color: $accent-color !important;
       }
     }
+    .nav-item.author-nav {
+      img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        margin-right: 5px;
+        border: 1px solid  $primary-color-light;  
+      }
+    }
 }
 
 .collapse-bg {

@@ -43,6 +43,29 @@
   }
 }
 
+.posts.show {
+  .author-bio {
+    background-color: rgb(225, 230, 232);
+    padding: 15px 45px;
+    margin: 30px 0;
+    img {
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+    img, h4 {
+      margin-bottom: 10px;
+    }
+    h4 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    h6 {
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+}
+
 .posts.edit, .posts.new {
   .card {
     .card-block {

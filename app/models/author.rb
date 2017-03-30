@@ -25,4 +25,23 @@ class Author < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   
   has_many :posts
+  
+  validates_presence_of :name, on: :update
+  
+  def change_password(attrs)
+    update(password: attrs[:new_password], password_confirmation:attrs[:new_password_confirmation])
+  end
+  
+  def gravatar_img_url
+    hash = Digest::MD5.hexdigest(email.downcase)
+    "https://www.gravatar.com/avatar/#{hash}"
+  end
+  
+  def display_name
+    if name.present?
+      name
+    else
+      "Author"
+    end
+  end
 end
