@@ -94,3 +94,5 @@ gem 'will_paginate', '~> 3.1.0'
 
 gem 'acts-as-taggable-on', '~> 4.0'
 
+gem 'font-awesome-sass', '~> 4.7.0'
+

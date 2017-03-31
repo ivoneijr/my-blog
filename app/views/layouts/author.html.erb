@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:page_title) %> | MyBlog</title>
+    <title><%= yield(:page_title) %> | Ivoneijr</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -25,5 +25,6 @@
 
       <%= yield %>
     </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

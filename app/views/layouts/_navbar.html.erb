@@ -3,17 +3,17 @@
     <div class='card'>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-          <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
+          <%= link_to 'Home', root_path, class: "nav-link #{yield(:blog_active)}" %>
         </li>
         <li class="list-group-item">
-          <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+          <%= link_to 'Sobre', about_path, class: "nav-link #{yield(:about_active)}" %>
         </li>
         <li class="list-group-item">
-          <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+          <%= link_to 'Contato', contact_path, class: "nav-link #{yield(:contact_active)}" %>
         </li>
         <% if author_signed_in? %>
           <li class="list-group-item">
-            <%= link_to 'My Posts', authors_posts_path, class: "nav-link #{yield(:author)}" %>
+            <%= link_to 'Meus posts', authors_posts_path, class: "nav-link #{yield(:author)}" %>
           </li>
           <li class="list-group-item">
             <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "nav-link"%>
@@ -28,7 +28,7 @@
 
 <nav class="navbar navbar-light bg-faded">
   <div class='container'>
-    <a class='navbar-brand' href='/'>
+    <a class='navbar-brand nav-a' href='/'>
       Ivonei<span class='light'>Jr</span>
     </a>
     <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
@@ -36,13 +36,13 @@
     </button>
     <ul class="nav navbar-nav pull-sm-right hidden-xs-down">
       <li class="nav-item">
-        <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
+        <%= link_to 'Home', root_path, class: "nav-link #{yield(:blog_active)}" %>
       </li>
       <li class="nav-item">
-        <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+        <%= link_to 'Sobre', about_path, class: "nav-link #{yield(:about_active)}" %>
       </li>
       <li class="nav-item">
-        <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+        <%= link_to 'Contato', contact_path, class: "nav-link #{yield(:contact_active)}" %>
       </li>
       <% if author_signed_in? %>
         <li class="nav-item dropdown author-nav">
@@ -51,13 +51,15 @@
             <%= current_author.display_name %>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <%= link_to 'My Posts', authors_posts_path, class: "dropdown-item" %>
-            <%= link_to 'Account', authors_account_path, class: "dropdown-item" %>
+            <%= link_to 'Meus posts', authors_posts_path, class: "dropdown-item" %>
+            <%= link_to 'Conta', authors_account_path, class: "dropdown-item" %>
             <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "dropdown-item"%>
           </div>
         </li>
       <%else%>  
-      <!-- TODO: LOGIN -->
+        <li class="nav-item">
+          <%= link_to 'Entrar', new_author_session_path, class: "nav-link" %>
+        </li>
       <%end%>
       
     </ul>

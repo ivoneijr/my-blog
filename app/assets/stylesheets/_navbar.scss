@@ -1,15 +1,19 @@
+
 .navbar {
     color: #c5ced4;
     background-color: $primary-color-dark;
     border-radius: 0;
     margin-bottom: 25px;
     .navbar-brand {
-      color: $accent-color;
+      color: $light-gray;
       font-weight: bolder;
       .light {
-        color: $primary-color-text;  
+        color: $accent-color; 
         font-weight: 300;
       }
+    }
+    .navbar-brand:hover {
+        color: $divider-color;
     }
     .navbar-toggler {
       outline: none;
