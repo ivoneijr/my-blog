@@ -47,7 +47,7 @@
       <% if author_signed_in? %>
         <li class="nav-item dropdown author-nav">
           <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag(current_author.gravatar_img_url) %>
+            <%= image_tag(current_author.image_url) %>
             <%= current_author.display_name %>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

@@ -23,13 +23,21 @@ class Author < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, #:registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  
+
   has_many :posts
   
+  has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/default-user.png"
+
+  validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
   validates_presence_of :name, on: :update
   
   def change_password(attrs)
     update(password: attrs[:new_password], password_confirmation:attrs[:new_password_confirmation])
+  end
+  
+  def image_url
+    return gravatar_img_url unless image_file_name
+    image.url(:thumb)
   end
   
   def gravatar_img_url
